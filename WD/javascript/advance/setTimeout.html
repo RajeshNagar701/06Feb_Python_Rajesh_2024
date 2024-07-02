@@ -14,7 +14,7 @@ function myGreeting()
 <h2 id="time"></h2>
 
 <script>
-setInterval(timmer, 1000);
+setInterval(timmer, 500);
 
 function timmer() 
 {
@@ -22,6 +22,7 @@ function timmer()
   var time = (today.getHours()) + ":" + today.getMinutes() + ":" + today.getSeconds();
   document.getElementById("time").innerHTML = time;
 }
+
 </script>
 
 

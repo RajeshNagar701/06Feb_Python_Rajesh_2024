@@ -4,33 +4,49 @@
 <html>
 <body>
 
-<p id="deta"></p>
-
-<p id="normal"></p>
-
-
-
-<p id="arraysort"></p>
-
-
-<p id="arrayrevers"></p>
 
 <script>
 
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-document.getElementById("deta").innerHTML = fruits;
+// collections of values
 
-document.getElementById("normal").innerHTML = fruits[1];
+var fruits = ["Banana", "Orange", "Apple", "Mango","Kiwi"];
 
-// reverse() sorting in reverse
-document.getElementById("arrayrevers").innerHTML = fruits.reverse(); 
+document.write(fruits + "<br>");
 
 
-// sort() sorting in a-z way
-document.getElementById("arraysort").innerHTML = fruits.sort();   // a-z
+document.write(fruits[2] + "<br>");
+
+for(var i=0;i<fruits.length;i++)
+{
+	document.write(fruits[i] + "<br>");
+}
 
 
+// array sorting
+
+document.write(fruits.reverse() + "<br>" ); // reverse full arr
+
+
+document.write(fruits.sort() + "<br>"); // a to z
+
+
+// array manuplation
+
+fruits.push("WaterM"); // ADD VALUE IN LAST
+document.write(fruits + "<br>");
+
+
+fruits.pop("WaterM"); // Remove VALUE IN LAST
+document.write(fruits + "<br>");
+
+
+fruits.unshift("WaterM"); // add VALUE IN start
+document.write(fruits + "<br>");
+
+
+fruits.shift("WaterM"); // remove VALUE IN start
+document.write(fruits + "<br>");
 </script>
 
 </body>

@@ -118,10 +118,13 @@ onmouseover="",
 onmouseup="">  
 
 <!-- onclick HTML EVENT-->
+<div>
 <h1 id="raj"> rajesh</h1>
 
-<input type="text" id="demo" onkeyup="myfunction1()">
+<input type="text" id="demo" onkeypress="myfunction1()"/>
+</div>
 
+<img src="logo.png" id="img" width="200px" height="200px" onmouseover="img1()" onmouseout="img2()"/>
 
 
 <script>
@@ -134,7 +137,21 @@ onmouseup="">
 	{
 		document.getElementById('demo').style.color="red";	
 		document.getElementById('demo').style.textTransform="uppercase";
+		document.getElementById('demo').style.backgroundColor="yellow";
 	}
+	
+	function img1()
+	{
+		document.getElementById('img').style.width="300px";	
+		document.getElementById('img').style.height="300px";
+	}
+	function img2()
+	{
+		document.getElementById('img').style.width="200px";	
+		document.getElementById('img').style.height="200px";
+	}
+	
+	
 </script>
 </body>
 </html>

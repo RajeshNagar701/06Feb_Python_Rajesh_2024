@@ -9,7 +9,7 @@
 	
 	function multiple_style()
 	{
-		document.getElementById("raj").setAttribute("style", "font-size:100px; font-style:italic; color:#ff0000;");
+		document.getElementById("raj").setAttribute('style','color:pink;background-color:yellow;text-align:center');
 	}
 	
 	
@@ -24,38 +24,6 @@
 <h1 id="raj" style="color:blue">This is style given by javascript function</h1>
 
 
-
-
-<script>
-function myfunction()
-	{
-		document.getElementById("demo").setAttribute("style", "color:red; background-color:yellow; text-transform:uppercase");
-	}
-</script>
-
-Enter Name : <input type="text" id="demo" onkeyup="myfunction()">
-
-
-
-<br>
-
-
-<script>
-function myFunction1() 
-	{
-	  var text = document.getElementById("demo1").innerHTML;
-	  document.getElementById("demo1").innerHTML = text.toUpperCase();
-	}
-</script>
-
-
-<button onclick="myFunction1()">Try it</button>
-
-<p id="demo1">Hello World!</p>
-
-<script>
-
-</script>
 
 
 </body>

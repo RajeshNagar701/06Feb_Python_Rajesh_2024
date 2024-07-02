@@ -106,6 +106,28 @@ function validate()  // function name
 
 	}
 	
+	var chk_arr = document.getElementsByName("chk");
+    if (chk_arr[0].checked == true) 
+	{
+                   
+    } 
+	else if (chk_arr[1].checked == true) 
+	{
+                  
+    }
+	else if (chk_arr[2].checked == true) 
+	{
+                  
+    } 
+	else if (chk_arr[3].checked == true) 
+	{
+                  
+    } 	
+	else 
+	{
+		alert('! Please Select any one Hobby');  // alert msg
+        return false;
+    }
 	
 	var gen_arr = document.getElementsByName("gender");
     if (gen_arr[0].checked == true) 
@@ -123,28 +145,6 @@ function validate()  // function name
     }
 	
 	
-	var chk_arr = document.getElementsByName("chk");
-    if (chk_arr[0].checked == true) 
-	{
-                   
-    } 
-	else if (chk_arr[1].checked == true) 
-	{
-                  
-    } 
-	else if (chk_arr[2].checked == true) 
-	{
-                  
-    } 
-	else if (chk_arr[3].checked == true) 
-	{
-                  
-    }
-	else 
-	{
-		alert('! Please Select any one Hobby ');  // alert msg
-		return false;
-    }
 	
 	
 }
