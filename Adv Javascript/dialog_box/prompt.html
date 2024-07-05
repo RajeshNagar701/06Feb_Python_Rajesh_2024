@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script>
+
+	// only pop up box wih ok and cancel and with textbox 
+	
+	function prompt_fun()
+	{
+		var value=prompt("enter your code");  // input text value
+		if(value=="1234")
+		{
+			window.location='alert.html';  // page redirect
+			return true;
+		}
+		else
+		{
+			return true;
+		}
+	}
+</script>
+
+</head>
+
+<body>
+
+
+<input type="submit" value="Propmt box"  onclick="prompt_fun()">
+
+
+
+</body>
+</html>
