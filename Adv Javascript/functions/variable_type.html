@@ -1,0 +1,94 @@
+<script>
+/*
+Variables are Containers for Storing Data
+JavaScript Variables can be declared in 4 ways:
+
+Automatically
+
+Using var
+Using let   ES6
+Using const ES6 
+
+
+*/
+
+/*
+
+x = 5;
+y = 6;
+z = x + y;
+document.write(z);
+
+*/
+
+/*
+
+The var keyword was used in all JavaScript code from 1995 to 2015.
+Variables declared with the var always have Global Scope.
+
+Variables declared with the var keyword can NOT have block scope
+
+
+var x,y,z;
+x = 5;
+y = 6;
+z = x + y;
+document.write(z);
+*/
+
+//JavaScript Hoisting : In JavaScript, a variable can be declared after it has been used.
+
+/*
+x = 5;
+y = 6;
+z = x + y;
+document.write(z);
+
+var x,y,z;
+
+*/
+
+/*
+
+The let and const keywords were added to JavaScript in 2015.
+
+Variables declared with let have Block Scope
+
+Variables declared with let must be Declared before use
+
+Variables declared with let cannot be Redeclared in the same scope
+
+*/
+/*
+function sum()
+{
+	let a=10;
+	let b=20;
+	let c=a+b;
+	document.write(c);
+}
+sum();
+
+document.write(c);
+
+*/
+
+/*
+The const keyword was introduced in ES6 (2015)
+
+Variables defined with const cannot be Redeclared
+
+Variables defined with const cannot be Reassigned
+
+Variables defined with const have Block Scope
+
+*/
+
+
+const PI = 3.141592653589793;
+PI = 3.17;      // This will give an error
+
+
+
+
+</script>

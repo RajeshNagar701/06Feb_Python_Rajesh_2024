@@ -13,7 +13,7 @@ This operator specifies an expression to be evaluated without returning a value.
  
  -->
  <p><p>Click the following, This won't react at all...</p></p>
- <a href = "javascript:void(alert('Warning!!!'))">Click me!</a>     
+ <a href ="javascript:void(alert('Warning!!!'))">Click me!</a>     
  
  
  
@@ -42,9 +42,11 @@ It is useful when we insert links that have some important role on the webpage w
 
 
 <a href ="" onclick="hello()">  
-It will do nothing.  
+It will do  
 </a>
-<a href = "javascript:void(0);"  onclick="hello()">  
+<!-- tells the browser to "do nothing" -->
+
+<a href = "javascript:void(0);"  onclick="hello()">   
 It will do nothing.  
 </a>  
 
