@@ -10,7 +10,9 @@ document.writeln(result);
 
 
 
-//It returns the newly created array iterator object. The iterator object represents each element of the array with keys assigned to them.
+//It returns the newly created array iterator object. 
+//The iterator object represents each element of the array with 
+//keys assigned to them.
 
 
 var arr=['John','Michael','Embrose','Herry','Lewis'];  
@@ -21,7 +23,8 @@ for(var e of itr) //for loop using var.
 }  
 
 
-//The JavaScript array every() method checks whether all the given elements in an array are satisfying the provided condition
+//The JavaScript array every() method checks whether all the given 
+//elements in an array are satisfying the provided condition
 var marks=[50,40,45,37,20];  
   
 function check(value)  
@@ -31,12 +34,14 @@ function check(value)
 document.writeln(marks.every(check) + "</br>");  
 
 
-//It returns a newly created array containing all the sub-array elements concatenated into it.
+//It returns a newly created array containing all the sub-array 
+//elements concatenated into it.
 var arr=[90,18,[89,56],[13,20,[67,17]]]; //given multidimensional array  
 var newArr=arr.flat(); //using flat() method  
 document.write(newArr + "</br>");  
 
-//fill() method fills the elements of the given array with the specified static values.
+//fill() method fills the elements of the given array with the 
+//specified static values.
 
 var arr=["AngularJS","Node.js","JQuery"];  
 var result=arr.fill("Bootstrap");  
@@ -48,15 +53,9 @@ var result=arr.fill("Bootstrap",0,2);
 document.writeln(arr + "</br>");  
 
 
-var arr=Array.from("You are viewing an example of string"); //The string will get converted to an array.  
+//The string will get converted to an array.  
+var arr=Array.from("You are viewing an example of string"); 
 document.write("The resultant is: <br>" + arr  + "</br>");  
-
-
-var func = function() 
-{  
-    document.write(Array.from(arguments) + "</br>" ); //Using from() method  
-}  
-func('John','Roy','Jess','Mary'); //value passed to function f().  
 
 
 //filter() method filter and extract the element of an array that satisfying the provided condition.
@@ -73,16 +72,18 @@ document.writeln(marks.filter(check) + "</br>");
 //The JavaScript array find() method returns the first element of the given array that satisfies the provided function condition.
 
 var arr=[5,19,25,34];  
-var result=arr.find(x=>x>20);  
+var result=arr.find((value)=>value>20);  
 document.writeln(result + "</br>")  
 
 //It returns the index value of the first element in the given array that satisfies the specified condition.
 
 var arr=[5,19,25,34];  
-var result=arr.findIndex(x=>x>20);  
+var result=arr.findIndex((value)=>value>20);  
 document.writeln(result + "</br>")  
 
-//The JavaScript array includes() method checks whether the given array contains the specified element. It returns true if an array contains the element, otherwise false.
+//The JavaScript array includes() method checks whether the given array 
+//contains the specified element. It returns true if an array contains 
+//the element, otherwise false.
 
 var arr=["AngularJS","Node.js","JQuery"]  
 var result=arr.includes("AngularJS");  
@@ -102,11 +103,6 @@ var result= arr.indexOf("C++",2);
 document.writeln(result + "</br>");  
 
 
-// isArray() method is used to test whether the value passed is an array. If it finds the passed value is an array, it returns True. Otherwise, it returns False.
-var arr=[10,20,40,50]; //An integer array. 
-var arr1=new Array(1,2,34,4,5);                 
-document.write(Array.isArray(arr1))  
-
 //It joins the elements of an array as a string.
 var arr=["AngularJs","Node.js","JQuery"]  
 var result=arr.join()  
@@ -120,10 +116,7 @@ var arr=["C","C++","Python","C++","Java"];
 var result= arr.lastIndexOf("C++");  
 document.writeln(result);  
 
-//map() method calls the specified function for every array element and returns the new array.
-var arr=[2.1,3.5,4.7];  
-var result=arr.map(Math.round);  
-document.writeln(result);  
+
 
 var arr=['John','Tom','James','Sheero']; // An array is defined  
 function ismatching(arr)  
@@ -140,20 +133,23 @@ var arr=["AngularJS","Node.js","JQuery"];
 var result=arr.shift();
 document.writeln(result + "<br>");
 
-//It returns a new array containing the copy of the part of the given array. The slice() method is represented by the following syntax:
+//It returns a new array containing the copy of the part 
+//of the given array. The slice() method is represented by the following syntax:
+
 var arr1=["AngularJS","Node.js","JQuery","Bootstrap"]  
-var result=arr.slice(1,2);  
+var result=arr1.slice(1,2);  
 document.writeln(result + "<br>");  
 
-//It add/remove elements to/from the given array.\The splice() method is represented by the following syntax:
+//It add/remove elements to/from the given array.
+//The splice() method is represented by the following syntax:
 
 var arr2=["Monday","Tuesday","Thursday","Friday"];
-var result=arr.splice(2,0,"Wednesday")
-document.writeln(arr + "<br>");
+var result=arr2.splice(2,0,"Wednesday")
+document.writeln(arr2 + "<br>");
 
 var arr3=["Monday","Tuesday","Saturday","Sunday","Thursday","Friday"];
-var result=arr.splice(2);
-document.writeln("Updated array: "+arr+"<br>");
+var result=arr3.splice(2);
+document.writeln("Updated array: "+arr3+"<br>");
 document.writeln("Removed element: "+result);
 //It returns a string containing all the elements of a specified array.
 			  

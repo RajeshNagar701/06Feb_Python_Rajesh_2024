@@ -1,6 +1,8 @@
 <script>
 /*
+
 JavaScript Objects
+
 A javaScript object is an entity having state and behavior (properties and method). 
 For example: car, pen, bike, chair, glass, keyboard, monitor etc.
 
@@ -15,7 +17,10 @@ There are 3 ways to create objects.
 
 By object literal  
 
-var obj={id:102,name:"Shyam Kumar",salary:40000};
+
+var students={id:102,name:"Shyam Kumar",salary:40000};
+
+document.write(students.id + students.name + students.salary)
 
 =============================================================
 
@@ -26,23 +31,28 @@ emp.id=101;
 emp.name="Ravi Malik";  
 emp.salary=50000;  
 
+document.write(emp.id + emp.name + emp.salary)
+
 ==========================================================
 By using an object constructor (using new keyword)
 
 function emp(id,name,salary)
 {  
-	this.userid=id;
-	this.username=name;
-	this.usersalary=salary;
+	this.id=id;
+	this.name=name;
+	this.salary=salary;
 }  
 obj=new emp(103,"Vimal Jaiswal",30000);
+
+document.write(obj.id + username.name + obj.salary)
+
 
 */
 
 //var name=["rajesh","akash","mahesh"]
 
 
-/*
+
 
 obj={id:102,name:"Shyam Kumar",salary:40000,email:"shyam@gmail.com",mobile:"1234567891"};
 
@@ -56,7 +66,7 @@ for(var property in obj)
 	document.write("<h1>"+ obj[property] + "</h1>");
 }
 
-*/
+
 
 
 obj_arr=[
