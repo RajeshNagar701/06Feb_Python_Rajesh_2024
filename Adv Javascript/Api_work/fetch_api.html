@@ -16,51 +16,42 @@
   <body>
     
     <div class="container">
-	  <div id="loading" class="spinner-border text-muted mt-5"></div>		
-      <div class="row" id="btn"></div>
+	  <div class="spinner-border" id="spin"></div>	
+      <div class="row" id="mydata">
+		
+	  </div>
     </div>
     <script>
          
-      let btn = document.getElementById("btn");
+      let div = document.getElementById("mydata");
+	  
+	  fetch('https://fakestoreapi.com/products')
+		.then((res)=>res.json())
+		.then((obj)=>	{ 
+			showData(obj);
+			document.getElementById("spin").style.display="none";
+		});  
+		
 
-      function showData(data) 
+      function showData(obj_arr) 
 	  {
-		for(const myData of data) 
+		for(var data of obj_arr)
 		{
-		  let htmlData = ` <div class="col-md-3">
-			<div class="card">
-			  <img src="${myData.thumbnailUrl}" class="card-img-top" alt="" />
-			  <div class="card-body">
-				<h5 class="card-title">${myData.title}</h5>
-			  </div>
-			</div>
-		  </div>`;
-		  btn.insertAdjacentHTML("afterbegin", htmlData);
+			var html=`<div class='col-md-3'>
+				<div class="card" style="width:100%">
+				  <img class="card-img-top" src='${data.image}' alt="Card image">
+				  <div class="card-body">
+					<h4 class="card-title">${data.title}</h4>
+					<p class="card-text">${data.category}</p>
+					<a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>`;
+			div.insertAdjacentHTML('beforeend',html);
 		}
       }
 	  
-     
-	fetch("https://jsonplaceholder.typicode.com/photos")
-	  .then((response) => {
-		return response.json();
-	  })
-	  .then((data) => {
-		showData(data)
-		document.getElementById('loading').style.display="none";
-	  })
-	  .catch((err) => console.log(err));
-	  
-	fetch("https://beaidal.com/view_contacts.php")
-	  .then((response) => {
-		return response.json();
-	  })
-	  .then((res) => {
-		console.log(res);
-	  })
-	  .catch((err) => console.log(err));  
-	  
-	  
-      
+    
     </script>
     
   </body>
