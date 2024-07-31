@@ -15,7 +15,7 @@ Rejected
 Promise How To
 Here is how to use a Promise:
 
-myPromise.then(
+myPromis.then(
   function(value) { /* code if successful */ },
   function(error) { /* code if some error */ }
 );
@@ -32,7 +32,7 @@ myPromise.then(
  
     <script>
 	
-      let songPublish = false;
+      let songPublish = true;
       let lottery = new Promise(function (resolve, reject) 
 	  {
         setTimeout(function () 
@@ -47,6 +47,9 @@ myPromise.then(
           }
         }, 2000);
       });
+	
+	
+	
 	lottery.then((response) => document.write(response)).catch((err) => document.write(err));
 
     </script>

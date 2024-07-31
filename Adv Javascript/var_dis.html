@@ -1,0 +1,21 @@
+<script>
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const [a,b, ...rest] = numbers;
+
+document.write(`${a}<br>`);
+document.write(`${b}<br>`);
+document.write(`${rest}<br>`);
+
+const myVehicle1 = {
+		  type: 'car',
+		  year: 2021, 
+		  color: 'yellow'
+		}
+
+const {type,color} = myVehicle1;
+
+document.write(`${type}<br>`);
+document.write(`${color}<br>`);
+
+</script>
