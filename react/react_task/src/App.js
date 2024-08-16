@@ -3,6 +3,7 @@ import Home from "./Basic_layout/Home";
 import Class_compo from "./Component/Class_compo";
 import Func_compo from "./Component/Func_compo";
 import Mycomp from "./Mycomp";
+import App_Routing from "./Routing/App_Routing";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
 
           // basic layout 
           
-          //<Home/>
-          <Contact/>
+          // Routing
+          <App_Routing/>
+
         }
         
     </div>
