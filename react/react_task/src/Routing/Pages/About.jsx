@@ -7,7 +7,7 @@ import Footer from '../Common/Footer'
 function About() {
     return (
         <div>
-            <Header />
+            <Header title="About Page"/>
             <Navbar />
             <div class="container mt-5">
                 <div class="row">

@@ -7,7 +7,9 @@ import Basic_css1 from "./CSS/Basic_css1";
 import Jsx from "./JSX/Jsx";
 import Module_css from "./Module_css/Module_css";
 import Mycomp from "./Mycomp";
+import Product from "./Props/Product";
 import App_Routing from "./Routing/App_Routing";
+import Class_state from "./State/Class_state/Class_state";
 
 function App() {
   return (
@@ -33,9 +35,14 @@ function App() {
           //<Basic_css/>
           //<Basic_css1/>
           
-
-          <Module_css/>
+          //<Module_css/>
         
+          // Props
+          //<Product/>
+
+
+          //state
+          <Class_state/>
         }
         
     </div>

@@ -7,7 +7,7 @@ import Footer from '../Common/Footer'
 function Contact() {
     return (
         <div>
-            <Header />
+            <Header title="Contact Page"/>
             <Navbar />
             <div class="container mt-5">
                 <div class="row">
