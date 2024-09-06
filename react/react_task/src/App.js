@@ -5,11 +5,15 @@ import Func_compo from "./Component/Func_compo";
 import Basic_css from "./CSS/Basic_css";
 import Basic_css1 from "./CSS/Basic_css1";
 import Jsx from "./JSX/Jsx";
+import Class_life from "./Lifecycle/Class_life/Class_life";
+import Func_life from "./Lifecycle/Func_life/Func_life";
 import Module_css from "./Module_css/Module_css";
 import Mycomp from "./Mycomp";
 import Product from "./Props/Product";
 import App_Routing from "./Routing/App_Routing";
+import Sass_css from "./Sass_css/Sass_css";
 import Class_state from "./State/Class_state/Class_state";
+import Func_state from "./State/Func_state/Func_state";
 
 function App() {
   return (
@@ -40,9 +44,22 @@ function App() {
           // Props
           //<Product/>
 
+          // Sass CSS
+          <Sass_css/>
+
+
 
           //state
-          <Class_state/>
+          //<Class_state/>
+          //<Func_state/>
+        
+          //Life Cycle
+          //<Class_life/>
+          //<Func_life/>
+
+
+
+
         }
         
     </div>

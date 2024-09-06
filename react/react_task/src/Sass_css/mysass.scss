@@ -1,0 +1,81 @@
+/* 1) Define standard variables and values for website */
+
+$bc: lightblue;
+$tc: darkblue;
+$fs: 18px;
+
+.box{
+    background-color: $bc;
+    color: $tc;
+    width: 200px;
+    height: 200px;
+}
+
+// 2) Sass Nested Rules
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+      color: $tc;
+      background-color: $bc;
+    }
+  }
+  
+  //3) Sass Nested Properties
+
+  .myfont{
+    font: {
+        family: Helvetica, sans-serif;
+        size: 18px;
+        weight: bold;
+      }      
+  }
+
+  .myfont{
+    text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+      }         
+  }
+
+// Sass @extend and Inheritance
+
+  .btn{
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: lightgray;
+    color: white;
+  }
+  .btn-red{
+    @extend .btn;
+    cursor: pointer;
+    background-color: red;
+  }
+
+  .btn-green{
+    @extend .btn;
+    background-color: green;
+  }
+
+  .btn-blue{
+    @extend .btn;
+    background-color: blue
+  }
+
+  .btn-yellow{
+    @extend .btn;
+    background-color: yellow
+  }
