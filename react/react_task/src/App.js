@@ -10,6 +10,8 @@ import Func_life from "./Lifecycle/Func_life/Func_life";
 import Module_css from "./Module_css/Module_css";
 import Mycomp from "./Mycomp";
 import Product from "./Props/Product";
+import React_bootstrap from "./React_bootstrap/React_bootstrap";
+import Simple_bootstrap from "./React_bootstrap/Simple_bootstrap";
 import App_Routing from "./Routing/App_Routing";
 import Sass_css from "./Sass_css/Sass_css";
 import Class_state from "./State/Class_state/Class_state";
@@ -45,7 +47,7 @@ function App() {
           //<Product/>
 
           // Sass CSS
-          <Sass_css/>
+          //<Sass_css/>
 
 
 
@@ -58,8 +60,9 @@ function App() {
           //<Func_life/>
 
 
-
-
+           //React Bootstrap
+           //<Simple_bootstrap/> 
+          <React_bootstrap/>
         }
         
     </div>
