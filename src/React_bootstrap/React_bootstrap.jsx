@@ -32,6 +32,10 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Alert from 'react-bootstrap/Alert';
+
+import Carousel from 'react-bootstrap/Carousel';
+
 
 function React_bootstrap() {
     return (
@@ -45,6 +49,9 @@ function React_bootstrap() {
             <Button variant="light">Light</Button>{' '}
             <Button variant="dark">Dark</Button>
             <Button variant="link">Link</Button>
+
+
+
 
             <hr />
 
@@ -70,8 +77,41 @@ function React_bootstrap() {
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
             </Card>
+            <hr />
+
+
+
+
+            <Alert variant="primary">
+                This is a Primary alert—check it out!
+            </Alert>
 
             <hr />
+
+            {
+                [ 'primary',
+                    'secondary',
+                    'success',
+                    'danger',
+                    'warning',
+                    'info',
+                    'light',
+                    'dark'].map((value,index,arr)=>{
+                        return(
+                            <Alert variant={value}>
+                                This is a Primary alert—check it out!
+                            </Alert>
+                        )
+                    })
+            }
+
+            <hr />
+
+
+
+            <hr />
+
+
 
             <Container>
                 <Row>

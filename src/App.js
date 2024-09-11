@@ -11,6 +11,7 @@ import Module_css from "./Module_css/Module_css";
 import Mycomp from "./Mycomp";
 import Product from "./Props/Product";
 import React_bootstrap from "./React_bootstrap/React_bootstrap";
+import React_bootstrap_deepak from "./React_bootstrap/React_bootstrap_deepak";
 import Simple_bootstrap from "./React_bootstrap/Simple_bootstrap";
 import App_Routing from "./Routing/App_Routing";
 import Sass_css from "./Sass_css/Sass_css";
@@ -62,7 +63,8 @@ function App() {
 
            //React Bootstrap
            //<Simple_bootstrap/> 
-          <React_bootstrap/>
+          //<React_bootstrap/>
+          <React_bootstrap_deepak/>
         }
         
     </div>
