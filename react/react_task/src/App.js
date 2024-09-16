@@ -8,6 +8,7 @@ import Jsx from "./JSX/Jsx";
 import Class_life from "./Lifecycle/Class_life/Class_life";
 import Func_life from "./Lifecycle/Func_life/Func_life";
 import Module_css from "./Module_css/Module_css";
+import Mui from "./MUI/Mui";
 import Mycomp from "./Mycomp";
 import Product from "./Props/Product";
 import React_bootstrap from "./React_bootstrap/React_bootstrap";
@@ -64,7 +65,11 @@ function App() {
            //React Bootstrap
            //<Simple_bootstrap/> 
           //<React_bootstrap/>
-          <React_bootstrap_deepak/>
+          //<React_bootstrap_deepak/>
+
+          //MUI
+          <Mui/>
+
         }
         
     </div>
