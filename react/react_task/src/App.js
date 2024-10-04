@@ -1,3 +1,4 @@
+import Basic_crud from "./Basic_crud/Basic_crud";
 import Contact from "./Basic_layout/Contact";
 import Home from "./Basic_layout/Home";
 import Class_compo from "./Component/Class_compo";
@@ -68,7 +69,9 @@ function App() {
           //<React_bootstrap_deepak/>
 
           //MUI
-          <Mui/>
+          //<Mui/>
+
+          <Basic_crud/>
 
         }
         
