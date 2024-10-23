@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Wheader() {
     return (
@@ -48,24 +48,7 @@ function Wheader() {
                 <link rel="stylesheet" href="website/css/responsive.css" />
                 <script src="website/js/jquery.min.js"></script>
             </Helmet>
-
             {/* End Preloader */}
-            {/* Get Pro Button */}
-            <ul className="pro-features">
-                <a className="get-pro" href="#">Get Pro</a>
-                <li className="big-title">Pro Version Available on Themeforest</li>
-                <li className="title">Pro Version Features</li>
-                <li>2+ premade home pages</li>
-                <li>20+ html pages</li>
-                <li>Color Plate With 12+ Colors</li>
-                <li>Sticky Header / Sticky Filters</li>
-                <li>Working Contact Form With Google Map</li>
-                <div className="button">
-                    <a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879" target="_blank" className="btn">Pro Version Demo</a>
-                    <a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" className="btn">Buy Pro Version</a>
-                </div>
-            </ul>
-            {/* Header Area */}
             <header className="header">
                 {/* Topbar */}
                 <div className="topbar">
@@ -113,7 +96,7 @@ function Wheader() {
                                         <nav className="navigation">
                                             <ul className="nav menu">
                                                 <li><NavLink to="/">Home </NavLink></li>
-                                                <li><NavLink to="/doctor">Doctos </NavLink></li>
+                                                <li><NavLink to="/doctor">Doctos Services  </NavLink></li>
                                                 <li><NavLink to="/about">About </NavLink></li>
                                                 <li><NavLink to="#">My Account <i className="icofont-rounded-down" /></NavLink>
                                                     <ul className="dropdown">
@@ -121,7 +104,8 @@ function Wheader() {
                                                     </ul>
                                                 </li>
 
-                                                <li><NavLink to="/contact">Contact Us</NavLink></li>
+                                                <li><NavLink to="/contact">Contact</NavLink></li>
+                                                <li><NavLink to="/login">Login</NavLink></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -129,7 +113,7 @@ function Wheader() {
                                 </div>
                                 <div className="col-lg-2 col-12">
                                     <div className="get-quote">
-                                        <a href="appointment.html" className="btn">Book Appointment</a>
+                                        <Link to="/appointment" className="btn">Book Appointment</Link>
                                     </div>
                                 </div>
                             </div>

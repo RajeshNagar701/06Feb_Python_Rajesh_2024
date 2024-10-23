@@ -29,13 +29,7 @@ function Dashboard() {
             <div className="row">
               <div className="col-12">
                 <div className="inner-content">
-                  <div className="image-slider">
-                    <div className="pf-details-slider">
-                      <img src="website/img/call-bg.jpg" alt="#" />
-                      <img src="website/img/call-bg.jpg" alt="#" />
-                      <img src="website/img/call-bg.jpg" alt="#" />
-                    </div>
-                  </div>
+                 
                   <div className="date">
                     <ul>
                       <li><span>Category :</span> Heart Surgery</li>

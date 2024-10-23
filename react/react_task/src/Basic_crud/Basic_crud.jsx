@@ -1,16 +1,18 @@
 import { Password } from '@mui/icons-material'
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 function Basic_crud() {
 
     const [data, setData] = useState([]);
+
     const [formvalue, setFormvalue] = useState({
         id: "",
         name: "",
         email: "",
         password: ""
-    })
+    });
+
     const changeHandel = (e) => {
         setFormvalue({ ...formvalue, id: new Date().getTime().toString(), [e.target.name]: e.target.value });
         console.log(formvalue);
@@ -29,8 +31,7 @@ function Basic_crud() {
         setData(filterdata);
         return false;
     }
-
-
+    
     const [editformvalue, seteditFormvalue] = useState({
         id: "",
         name: "",

@@ -38,12 +38,27 @@ function Add_services() {
                       <div className="row">
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <input type="text" name="name" placeholder="Categories Name" required />
+                            <input type="text" name="ser_name" placeholder="Services Name" required />
                           </div>
                         </div>
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <input type="file" name="file" required />
+                            <input type="number" name="ser_price" placeholder="Services Price" required />
+                          </div>
+                        </div>
+                        <div className="col-lg-6">
+                          <div className="form-group">
+                            <input type="url" name="ser_img" placeholder="Services Image URL" required />
+                          </div>
+                        </div>
+                        <div className="col-lg-6">
+                          <div className="form-group">
+                            <input type="text" name="ser_shortdes" placeholder="Services Short Description" required />
+                          </div>
+                        </div>
+                        <div className="col-lg-12">
+                          <div className="form-group">
+                            <textarea name="ser_longdes" placeholder="Services Long Description" required></textarea>
                           </div>
                         </div>
                         

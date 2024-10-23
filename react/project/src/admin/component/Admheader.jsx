@@ -50,22 +50,7 @@ function Admheader() {
             </Helmet>
 
             {/* End Preloader */}
-            {/* Get Pro Button */}
-            <ul className="pro-features">
-                <a className="get-pro" href="#">Get Pro</a>
-                <li className="big-title">Pro Version Available on Themeforest</li>
-                <li className="title">Pro Version Features</li>
-                <li>2+ premade home pages</li>
-                <li>20+ html pages</li>
-                <li>Color Plate With 12+ Colors</li>
-                <li>Sticky Header / Sticky Filters</li>
-                <li>Working Contact Form With Google Map</li>
-                <div className="button">
-                    <a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879" target="_blank" className="btn">Pro Version Demo</a>
-                    <a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" className="btn">Buy Pro Version</a>
-                </div>
-            </ul>
-            {/* Header Area */}
+          
             <header className="header">
                 {/* Topbar */}
                 <div className="topbar">
@@ -110,7 +95,7 @@ function Admheader() {
                                     <div className="main-menu">
                                         <nav className="navigation">
                                             <ul className="nav menu">
-                                                <li><NavLink to="/">Dashboard </NavLink></li>
+                                                <li><NavLink to="/dashboard">Dashboard </NavLink></li>
                                                 <li><NavLink to="#">Categories <i className="icofont-rounded-down" /></NavLink>
                                                     <ul className="dropdown">
                                                         <li><NavLink to="/add_categories">Add Categories</NavLink></li>
@@ -123,9 +108,8 @@ function Admheader() {
                                                         <li><NavLink to="/manage_services">Manage Services</NavLink></li>
                                                     </ul>
                                                 </li>
-
-                                                <li><NavLink to="/contact">Contact</NavLink></li>
-                                                <li><NavLink to="/contact">Customer</NavLink></li>
+                                                <li><NavLink to="/manage_customer">Customer </NavLink></li>
+                                                <li><NavLink to="/manage_contact">Contact </NavLink></li>
                                             </ul>
                                         </nav>
                                     </div>

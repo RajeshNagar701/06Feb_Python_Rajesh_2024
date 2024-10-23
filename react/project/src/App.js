@@ -9,6 +9,11 @@ import Manage_categories from "./admin/pages/Manage_categories";
 import Add_services from "./admin/pages/Add_services";
 import Manage_services from "./admin/pages/Manage_services";
 import Admin_login from "./admin/pages/Admin_login";
+import Manage_customer from "./admin/pages/Manage_customer";
+import Manage_contact from "./admin/pages/Manage_contact";
+import Appointment from "./website/pages/Appointment";
+import Login from "./website/pages/Login";
+import Signup from "./website/pages/Signup";
 
 function App() {
   return (
@@ -24,6 +29,9 @@ function App() {
           <Route path="/about" element={<About/>}></Route>
           <Route path="/doctor" element={<Doctor/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="/appointment" element={<Appointment/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
 
           {
             // Admin
@@ -34,6 +42,8 @@ function App() {
           <Route path="/manage_categories" element={<Manage_categories/>}></Route>
           <Route path="/add_services" element={<Add_services/>}></Route>
           <Route path="/manage_services" element={<Manage_services/>}></Route>
+          <Route path="/manage_customer" element={<Manage_customer/>}></Route>
+          <Route path="/manage_contact" element={<Manage_contact/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

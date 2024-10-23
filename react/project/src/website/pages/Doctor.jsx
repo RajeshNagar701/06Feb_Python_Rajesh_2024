@@ -12,7 +12,7 @@ function Doctor() {
             <div className="bread-inner">
               <div className="row">
                 <div className="col-12">
-                  <h2>Doctor Details</h2>
+                  <h2>Doctor Services</h2>
                   <ul className="bread-list">
                     <li><a href="index.html">Home</a></li>
                     <li><i className="icofont-simple-right" /></li>
@@ -29,37 +29,75 @@ function Doctor() {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <div className="inner-content">
-                  <div className="image-slider">
-                    <div className="pf-details-slider">
-                      <img src="website/img/call-bg.jpg" alt="#" />
-                      <img src="website/img/call-bg.jpg" alt="#" />
-                      <img src="website/img/call-bg.jpg" alt="#" />
+                <section className="services section">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <div className="section-title">
+                          <h2>We Offer Different Services To Improve Your Health</h2>
+                          <img src="website/img/section-img.png" alt="#" />
+                          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-lg-4 col-md-6 col-12">
+                        {/* Start Single Service */}
+                        <div className="single-service">
+                          <i className="icofont icofont-prescription" />
+                          <h4><a href="service-details.html">General Treatment</a></h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
+                        </div>
+                        {/* End Single Service */}
+                      </div>
+                      <div className="col-lg-4 col-md-6 col-12">
+                        {/* Start Single Service */}
+                        <div className="single-service">
+                          <i className="icofont icofont-tooth" />
+                          <h4><a href="service-details.html">Teeth Whitening</a></h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
+                        </div>
+                        {/* End Single Service */}
+                      </div>
+                      <div className="col-lg-4 col-md-6 col-12">
+                        {/* Start Single Service */}
+                        <div className="single-service">
+                          <i className="icofont icofont-heart-alt" />
+                          <h4><a href="service-details.html">Heart Surgery</a></h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
+                        </div>
+                        {/* End Single Service */}
+                      </div>
+                      <div className="col-lg-4 col-md-6 col-12">
+                        {/* Start Single Service */}
+                        <div className="single-service">
+                          <i className="icofont icofont-listening" />
+                          <h4><a href="service-details.html">Ear Treatment</a></h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
+                        </div>
+                        {/* End Single Service */}
+                      </div>
+                      <div className="col-lg-4 col-md-6 col-12">
+                        {/* Start Single Service */}
+                        <div className="single-service">
+                          <i className="icofont icofont-eye-alt" />
+                          <h4><a href="service-details.html">Vision Problems</a></h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
+                        </div>
+                        {/* End Single Service */}
+                      </div>
+                      <div className="col-lg-4 col-md-6 col-12">
+                        {/* Start Single Service */}
+                        <div className="single-service">
+                          <i className="icofont icofont-blood" />
+                          <h4><a href="service-details.html">Blood Transfusion</a></h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
+                        </div>
+                        {/* End Single Service */}
+                      </div>
                     </div>
                   </div>
-                  <div className="date">
-                    <ul>
-                      <li><span>Category :</span> Heart Surgery</li>
-                      <li><span>Date :</span> April 20, 2019</li>
-                      <li><span>Client :</span> Suke Agency</li>
-                      <li><span>Ags :</span> Typo</li>
-                    </ul>
-                  </div>
-                  <div className="body-text">
-                    <h3>Here is the name of this project here</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
-                    <p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
-                    <p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
-                    <div className="share">
-                      <h4>Share Now -</h4>
-                      <ul>
-                        <li><a href="#"><i className="fa fa-facebook-official" aria-hidden="true" /></a></li>
-                        <li><a href="#"><i className="fa fa-twitter" aria-hidden="true" /></a></li>
-                        <li><a href="#"><i className="fa fa-linkedin" aria-hidden="true" /></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                </section>
               </div>
             </div>
           </div>
