@@ -18,11 +18,34 @@ function Basic_crud() {
         console.log(formvalue);
     }
 
+    function validation() {
+        var result = true;
+        if (formvalue.name == "") {
+            result = false;
+            alert('Name Field is required !');
+            return false;
+        }
+        if (formvalue.email == "") {
+            result = false;
+            alert('Email Field is required !');
+            return false;
+        }
+        if (formvalue.password == "") {
+            result = false;
+            alert('Password Field is required !');
+            return false;
+        }
+        return result;
+    }
+
+
     const submitHandel = (e) => {
         e.preventDefault();
-        setData([...data, formvalue]);
-        setFormvalue({ ...formvalue, name: "", email: "", password: "" })
-        return false;
+        if (validation()) {
+            setData([...data, formvalue]);
+            setFormvalue({ ...formvalue, name: "", email: "", password: "" })
+            return false;
+        }
     }
 
     const deleteHandel = (id) => {
@@ -31,7 +54,7 @@ function Basic_crud() {
         setData(filterdata);
         return false;
     }
-    
+
     const [editformvalue, seteditFormvalue] = useState({
         id: "",
         name: "",
@@ -53,11 +76,11 @@ function Basic_crud() {
 
     const editsubmitHandel = (e) => {
         e.preventDefault();
-            const updatedata=data.map((item) => {
-                return item.id === editid ? { ...data, id:editid ,name: editformvalue.name, email: editformvalue.email, password: editformvalue.password } : item;
-            });
-            setData(updatedata);
-            console.log(data);
+        const updatedata = data.map((item) => {
+            return item.id === editid ? { ...data, id: editid, name: editformvalue.name, email: editformvalue.email, password: editformvalue.password } : item;
+        });
+        setData(updatedata);
+        console.log(data);
     }
 
     return (
@@ -82,15 +105,15 @@ function Basic_crud() {
                         <form action="" method="post" onSubmit={submitHandel}>
                             <div className="mb-3 mt-3">
                                 <label htmlFor="email">Name:</label>
-                                <input type="text" value={formvalue.name} onChange={changeHandel} required className="form-control" id="email" placeholder="Enter Name" name="name" />
+                                <input type="text" value={formvalue.name} onChange={changeHandel} className="form-control" id="email" placeholder="Enter Name" name="name" />
                             </div>
                             <div className="mb-3 mt-3">
                                 <label htmlFor="email">Email:</label>
-                                <input type="email" value={formvalue.email} onChange={changeHandel} required className="form-control" id="email" placeholder="Enter email" name="email" />
+                                <input type="email" value={formvalue.email} onChange={changeHandel} className="form-control" id="email" placeholder="Enter email" name="email" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="pwd">Password:</label>
-                                <input type="password" value={formvalue.password} onChange={changeHandel} required className="form-control" id="pwd" placeholder="Enter password" name="password" />
+                                <input type="password" value={formvalue.password} onChange={changeHandel} className="form-control" id="pwd" placeholder="Enter password" name="password" />
                             </div>
                             <button type="submit" className="btn btn-primary">Submit</button>
                         </form>
