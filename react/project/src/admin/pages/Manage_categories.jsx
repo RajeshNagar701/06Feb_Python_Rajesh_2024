@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Admheader from '../component/Admheader'
 import Admfooter from '../component/Admfooter'
+import axios from 'axios'
 
 function Manage_categories() {
+
+    useEffect(() => {
+        fetch();
+    }, []);
+
+    const [data, setData] = useState([]);
+    const fetch = async () => {
+        const res = await axios.get(`http://localhost:3000/categories`);
+        console.log(res.data);
+        setData(res.data);
+    }
+
+    const deleteHandel=async(id)=>{
+        const res=await axios.delete(`http://localhost:3000/categories/${id}`);
+        console.log(res);
+        fetch();
+    }
     return (
         <div>
             <Admheader />
@@ -36,25 +54,31 @@ function Manage_categories() {
                                     <div className="table-responsive">
                                         <table className="table">
                                             <thead>
-                                                <tr>
+                                            <tr>
                                                     <th>#ID</th>
-                                                    <th>Cate Name</th>
+                                                    <th>Category Name</th>
                                                     <th>Image</th>
                                                     <th>Action</th>
-                                                  
+
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Heart</td>
-                                                    <td><img src=""/></td>
-                                                    <td>
-                                                        <button className='btn btn-primary'>Edit</button>
-                                                        <button className='btn btn-danger'>Delete</button>
-                                                    </td>
-                                                    
-                                                </tr>
+                                                {
+                                                    data.map((value,index,arr) => {
+                                                        return (
+                                                            <tr>
+                                                                <td>{value.id}</td>
+                                                                <td>{value.cate_name}</td>
+                                                                <td><img src={value.cate_img} width="50px"></img></td>
+                                                                <td>
+                                                                    <button className='btn btn-primary'>Edit</button>
+                                                                    <button className='btn btn-danger' onClick={()=>deleteHandel(value.id)}>Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                        )
+                                                    })
+                                                }
+
                                             </tbody>
                                         </table>
                                     </div>

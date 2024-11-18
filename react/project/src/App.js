@@ -15,10 +15,15 @@ import Appointment from "./website/pages/Appointment";
 import Login from "./website/pages/Login";
 import Signup from "./website/pages/Signup";
 
+// add 2 lines for toast notification
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <div>
       <BrowserRouter>
+        <ToastContainer></ToastContainer>
         <Routes>
           
           {

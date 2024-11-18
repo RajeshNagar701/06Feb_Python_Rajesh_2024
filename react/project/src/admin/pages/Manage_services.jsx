@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Admheader from '../component/Admheader'
 import Admfooter from '../component/Admfooter'
-
+import axios from 'axios'
 function Manage_services() {
+
+    useEffect(() => {
+        fetch();
+    }, []);
+
+    const [data, setData] = useState([]);
+    const fetch = async () => {
+        const res = await axios.get(`http://localhost:3000/services`);
+        console.log(res.data);
+        setData(res.data);
+    }
+    const deleteHandel=async(id)=>{
+        const res=await axios.delete(`http://localhost:3000/services/${id}`);
+        console.log(res);
+        fetch();
+    }
+
     return (
         <div>
             <Admheader />
@@ -15,7 +32,7 @@ function Manage_services() {
                                 <ul className="bread-list">
                                     <li><a href="index.html">Home</a></li>
                                     <li><i className="icofont-simple-right" /></li>
-                                    <li className="active">Contact Us</li>
+                                    <li className="active">Services</li>
                                 </ul>
                             </div>
                         </div>
@@ -36,25 +53,37 @@ function Manage_services() {
                                     <div className="table-responsive">
                                         <table className="table">
                                             <thead>
-                                                <tr>
+                                            <tr>
                                                     <th>#ID</th>
-                                                    <th>Cate Name</th>
+                                                    <th>Cate Id</th>
+                                                    <th>Service Name</th>
+                                                    <th>Description</th>
+                                                    <th>Price</th>
                                                     <th>Image</th>
                                                     <th>Action</th>
-                                                  
+
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Heart</td>
-                                                    <td><img src=""/></td>
-                                                    <td>
-                                                        <button className='btn btn-primary'>Edit</button>
-                                                        <button className='btn btn-danger'>Delete</button>
-                                                    </td>
-                                                    
-                                                </tr>
+                                                {
+                                                    data.map((value,index,arr) => {
+                                                        return (
+                                                            <tr>
+                                                                <td>{value.id}</td>
+                                                                <td>{value.cate_id}</td>
+                                                                <td>{value.ser_name}</td>
+                                                                <td>{value.description}</td>
+                                                                <td>{value.price}</td>
+                                                                <td><img src={value.ser_img} width="50px"></img></td>
+                                                                <td>
+                                                                    <button className='btn btn-primary'>Edit</button>
+                                                                    <button className='btn btn-danger' onClick={()=>deleteHandel(value.id)}>Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                        )
+                                                    })
+                                                }
+
                                             </tbody>
                                         </table>
                                     </div>

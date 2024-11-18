@@ -1,0 +1,76 @@
+{
+  "user": [
+    {
+      "id": "1731911953195",
+      "name": "zaid",
+      "email": "zaid@gmail.com",
+      "password": "1234",
+      "mobile": "1234567891",
+      "img": "https://via.placeholder.com/600/56a8c2",
+      "status": "Unblock"
+    },
+    {
+      "id": "1731912110058",
+      "name": "khushi",
+      "email": "khushi@gmail.com",
+      "password": "1234",
+      "mobile": "1234567891",
+      "img": "https://via.placeholder.com/600/56a8c2",
+      "status": "Unblock"
+    }
+  ],
+  "contact": [
+    {
+      "id": "1731912378982",
+      "name": "nagar",
+      "email": "nagar@gmail.com",
+      "sub": "demo",
+      "msg": "demo msg"
+    },
+    {
+      "id": "1731912578055",
+      "name": "dsad",
+      "email": "sahuankita3285@gmail.com",
+      "sub": "demo",
+      "msg": "sadsadsd"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "cate_name": "Destist",
+      "cate_img": "https://via.placeholder.com/600/771796"
+    },
+    {
+      "id": "2",
+      "cate_name": "Eye Care",
+      "cate_img": "https://via.placeholder.com/600/24f355"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "cate_id": 1,
+      "ser_name": "Teeth Cleaning",
+      "description": "Teeth Cleaning",
+      "price": "399",
+      "ser_img": "https://via.placeholder.com/600/771796"
+    },
+    {
+      "id": "2",
+      "cate_id": 2,
+      "ser_name": "Eye Test",
+      "description": "Eye Test",
+      "price": "199",
+      "ser_img": "https://via.placeholder.com/600/d32776"
+    }
+  ]
+}

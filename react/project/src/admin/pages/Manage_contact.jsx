@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Admheader from '../component/Admheader'
 import Admfooter from '../component/Admfooter'
+import axios from 'axios'
 
 function Manage_contact() {
+
+
+    useEffect(() => {
+        fetch();
+    }, []);
+
+    const [data, setData] = useState([]);
+    const fetch = async () => {
+        const res = await axios.get(`http://localhost:3000/contact`);
+        console.log(res.data);
+        setData(res.data);
+    }
+
+    const deleteHandel=async(id)=>{
+        const res=await axios.delete(`http://localhost:3000/contact/${id}`);
+        console.log(res);
+        fetch();
+    }
+
     return (
         <div>
             <Admheader />
@@ -38,23 +58,33 @@ function Manage_contact() {
                                             <thead>
                                                 <tr>
                                                     <th>#ID</th>
-                                                    <th>Cate Name</th>
-                                                    <th>Image</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Subject</th>
+                                                    <th>Message</th>
                                                     <th>Action</th>
-                                                  
+
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Heart</td>
-                                                    <td><img src=""/></td>
-                                                    <td>
-                                                        <button className='btn btn-primary'>Edit</button>
-                                                        <button className='btn btn-danger'>Delete</button>
-                                                    </td>
-                                                    
-                                                </tr>
+                                                {
+                                                    data.map((value,index,arr) => {
+                                                        return (
+                                                            <tr>
+                                                                <td>{value.id}</td>
+                                                                <td>{value.name}</td>
+                                                                <td>{value.email}</td>
+                                                                <td>{value.sub}</td>
+                                                                <td>{value.msg}</td>
+                                                                <td>
+                                                                    <button className='btn btn-primary'>Edit</button>
+                                                                    <button className='btn btn-danger' onClick={()=>deleteHandel(value.id)}>Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                        )
+                                                    })
+                                                }
+
                                             </tbody>
                                         </table>
                                     </div>
