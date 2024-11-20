@@ -16,8 +16,8 @@ function Manage_categories() {
         setData(res.data);
     }
 
-    const deleteHandel=async(id)=>{
-        const res=await axios.delete(`http://localhost:3000/categories/${id}`);
+     const deleteHandel=async(id)=>{
+        const res=await axios.delete(`http://localhost:3000/user/${id}`);
         console.log(res);
         fetch();
     }
@@ -72,7 +72,7 @@ function Manage_categories() {
                                                                 <td><img src={value.cate_img} width="50px"></img></td>
                                                                 <td>
                                                                     <button className='btn btn-primary'>Edit</button>
-                                                                    <button className='btn btn-danger' onClick={()=>deleteHandel(value.id)}>Delete</button>
+                                                                    <button className='btn btn-danger'>Delete</button>
                                                                 </td>
                                                             </tr>
                                                         )

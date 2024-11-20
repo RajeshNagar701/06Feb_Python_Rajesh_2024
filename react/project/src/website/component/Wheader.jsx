@@ -1,8 +1,21 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 function Wheader() {
+
+    const redirect=useNavigate();
+   
+     const userlogout=()=>{
+
+        localStorage.removeItem('userid');
+        localStorage.removeItem('username');
+        toast.success('Logout Success');
+        redirect('/');
+        
+    }
+
     return (
 
         <div>
@@ -66,6 +79,19 @@ function Wheader() {
                             <div className="col-lg-6 col-md-7 col-12">
                                 {/* Top Contact */}
                                 <ul className="top-contact">
+
+                                    {
+                                        (
+                                            ()=>{
+                                                if(localStorage.getItem('userid'))
+                                                {
+                                                    return(<li><i className="fa fa-user" />Hi.. {localStorage.getItem('username')}</li>)
+                                                }
+                                            }
+                                        )()
+                                    }
+                                    
+                                    
                                     <li><i className="fa fa-phone" />+880 1234 56789</li>
                                     <li><i className="fa fa-envelope" /><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
                                 </ul>
@@ -98,14 +124,40 @@ function Wheader() {
                                                 <li><NavLink to="/">Home </NavLink></li>
                                                 <li><NavLink to="/doctor">Doctos Services  </NavLink></li>
                                                 <li><NavLink to="/about">About </NavLink></li>
-                                                <li><NavLink to="#">My Account <i className="icofont-rounded-down" /></NavLink>
-                                                    <ul className="dropdown">
-                                                        <li><NavLink href="404.html">404 Error</NavLink></li>
-                                                    </ul>
-                                                </li>
-
                                                 <li><NavLink to="/contact">Contact</NavLink></li>
-                                                <li><NavLink to="/login">Login</NavLink></li>
+                                                {
+                                                    (
+                                                      ()=>{
+
+                                                      }  
+
+                                                    )()
+                                                }
+
+                                                {(() => {
+                                                    if (localStorage.getItem('userid')) {
+                                                        return (<>
+                                                            <li><NavLink to="#">My Account <i className="icofont-rounded-down" /></NavLink>
+                                                                <ul className="dropdown">
+                                                                    <li><NavLink href="userprofile">Profile</NavLink></li>
+                                                                    <li><a href="javascript:void(0)" onClick={()=> userlogout()}>Logout</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            
+                                                        </>
+                                                        )
+                                                    }
+                                                    else {
+                                                        return (<li><NavLink to="/login">Login</NavLink></li>)
+                                                    }
+                                                })()
+
+                                                }
+
+
+
+
+
                                             </ul>
                                         </nav>
                                     </div>

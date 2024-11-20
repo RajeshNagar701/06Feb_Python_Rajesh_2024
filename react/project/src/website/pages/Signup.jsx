@@ -7,61 +7,62 @@ import { toast } from 'react-toastify'
 
 function Signup() {
 
-    const [formvalue, setFormvalue] = useState({
-        id: "",
-        name: "",
-        email: "",
-        password: "",
-        mobile: "",
-        img: "",
-        status: ""
+    const [formvalue,setFormvalue]=useState({
+        id:"",
+        name:"",
+        email:"",
+        password:"",
+        mobile:"",
+        img:"",
+        status:""
     })
 
-    const changeHandel = (e) => {
+    const changeHandel=(e)=>{
 
-        setFormvalue({ ...formvalue, id: new Date().getTime().toString(), status: "Unblock", [e.target.name]: e.target.value });
+        setFormvalue({...formvalue,id:new Date().getTime().toString(),status:"Unblock",[e.target.name]:e.target.value});
         console.log(formvalue);
     }
 
     function validation() {
         var result = true;
         if (formvalue.name == "") {
-            result = false;
-            toast.error('Name Field is required !');
-            return false;
+          result = false;
+          toast.error('Name Field is required !');
+          return false;
         }
         if (formvalue.email == "") {
-            result = false;
-            toast.error('Email Field is required !');
-            return false;
+          result = false;
+          toast.error('Email Field is required !');
+          return false;
         }
         if (formvalue.password == "") {
-            result = false;
-            toast.error('Password Field is required !');
-            return false;
+          result = false;
+          toast.error('Password Field is required !');
+          return false;
         }
         if (formvalue.mobile == "") {
-            result = false;
-            toast.error('Mobile Field is required !');
-            return false;
+          result = false;
+          toast.error('Mobile Field is required !');
+          return false;
         }
         if (formvalue.img == "") {
             result = false;
             toast.error('Image Field is required !');
             return false;
-        }
+          }
         return result;
-    }
-    const submitHandel = async (e) => {
+      }
+    const submitHandel=async(e)=>{
         e.preventDefault();
-        if (validation()) {
-            const res = await axios.post(`http://localhost:3000/user`, formvalue);
-            toast.success('User Signup Success !');
-            setFormvalue({ ...formvalue, name: "", email: "", password: "", mobile: "", img: "" });
-            return false;
+        if(validation())
+        {
+        const res=await axios.post(`http://localhost:3000/user`,formvalue);
+        toast.success('User Signup Success !');
+        setFormvalue({...formvalue,name:"",email:"",password:"",mobile:"",img:""});
+        return false;
         }
     }
-
+    
     return (
         <div>
             <Wheader />
@@ -126,7 +127,7 @@ function Signup() {
                                                                 <input name="img" onChange={changeHandel} value={formvalue.img} type="url" placeholder="Add Image Url" />
                                                             </div>
                                                         </div>
-
+                                                       
                                                     </div>
                                                     <div className="row">
                                                         <div className="col-lg-5 col-md-4 col-12">
@@ -137,7 +138,7 @@ function Signup() {
                                                             </div>
                                                         </div>
                                                         <div className="col-lg-7 col-md-8 col-12">
-                                                            <Link to="/login"> <p> If you already Regisrtered then Click Here</p></Link>
+                                                           <Link to="/login"> <p> If you already Regisrtered then Click Here</p></Link>
                                                         </div>
                                                     </div>
                                                 </form>
