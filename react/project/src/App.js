@@ -18,6 +18,7 @@ import Signup from "./website/pages/Signup";
 // add 2 lines for toast notification
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import User_profile from "./website/pages/User_profile";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/appointment" element={<Appointment/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
+          <Route path="/user_profile" element={<User_profile/>}></Route>
 
           {
             // Admin

@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 function Admheader() {
+    const redirect = useNavigate();
+    useEffect(() => {
+        if (localStorage.getItem('adminid')) {
+        }
+        else {
+            redirect('/admin-login')
+        }
+    })
+    const adminlogout = () => {
+
+        localStorage.removeItem('adminid');
+        localStorage.removeItem('adminname');
+        toast.success('Logout Success');
+        redirect('/admin-login');
+
+    }
     return (
 
         <div>
@@ -35,13 +52,9 @@ function Admheader() {
 
                 <link rel="stylesheet" href="website/css/slicknav.min.css" />
 
-                <link rel="stylesheet" href="website/css/owl-carousel.css" />
+                
 
-                <link rel="stylesheet" href="website/css/datepicker.css" />
-
-                <link rel="stylesheet" href="website/css/animate.min.css" />
-
-                <link rel="stylesheet" href="website/css/magnific-popup.css" />
+             
 
                 <link rel="stylesheet" href="website/css/normalize.css" />
                 <link rel="stylesheet" href="style.css" />
@@ -50,7 +63,7 @@ function Admheader() {
             </Helmet>
 
             {/* End Preloader */}
-          
+
             <header className="header">
                 {/* Topbar */}
                 <div className="topbar">
@@ -66,6 +79,15 @@ function Admheader() {
                             <div className="col-lg-6 col-md-7 col-12">
                                 {/* Top Contact */}
                                 <ul className="top-contact">
+                                    {
+                                        (
+                                            () => {
+                                                if (localStorage.getItem('adminid')) {
+                                                    return (<li><i className="fa fa-user" />Hi.. {localStorage.getItem('adminname')}</li>)
+                                                }
+                                            }
+                                        )()
+                                    }
                                     <li><i className="fa fa-phone" />+880 1234 56789</li>
                                     <li><i className="fa fa-envelope" /><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
                                 </ul>
@@ -117,7 +139,7 @@ function Admheader() {
                                 </div>
                                 <div className="col-lg-2 col-12">
                                     <div className="get-quote">
-                                        <a href="appointment.html" className="btn">Logout</a>
+                                        <a href="javascript:void(0)" onClick={adminlogout} className="btn">Logout</a>
                                     </div>
                                 </div>
                             </div>

@@ -124,22 +124,13 @@ function Wheader() {
                                                 <li><NavLink to="/">Home </NavLink></li>
                                                 <li><NavLink to="/doctor">Doctos Services  </NavLink></li>
                                                 <li><NavLink to="/about">About </NavLink></li>
-                                                <li><NavLink to="/contact">Contact</NavLink></li>
-                                                {
-                                                    (
-                                                      ()=>{
-
-                                                      }  
-
-                                                    )()
-                                                }
-
+                                                <li><NavLink to="/contact">Contact</NavLink></li>                                      
                                                 {(() => {
                                                     if (localStorage.getItem('userid')) {
                                                         return (<>
                                                             <li><NavLink to="#">My Account <i className="icofont-rounded-down" /></NavLink>
                                                                 <ul className="dropdown">
-                                                                    <li><NavLink href="userprofile">Profile</NavLink></li>
+                                                                    <li><NavLink to="/user_profile">Profile</NavLink></li>
                                                                     <li><a href="javascript:void(0)" onClick={()=> userlogout()}>Logout</a></li>
                                                                 </ul>
                                                             </li>
@@ -151,7 +142,6 @@ function Wheader() {
                                                         return (<li><NavLink to="/login">Login</NavLink></li>)
                                                     }
                                                 })()
-
                                                 }
 
 

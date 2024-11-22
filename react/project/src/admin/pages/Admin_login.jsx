@@ -1,9 +1,76 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { NavLink } from 'react-router-dom'
-
+import { NavLink, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 function Admin_login() {
+
+  const redirect = useNavigate();
+  useEffect(() => {
+      if (localStorage.getItem('adminid')) {
+        redirect('/dashboard')
+      }
+  })
+
+  const [formvalue, setFormvalue] = useState({
+    email: "",
+    password: "",
+})
+
+const changeHandel = (e) => {
+    setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
+    console.log(formvalue);
+}
+
+function validation() {
+    var result = true;
+
+    if (formvalue.email == "") {
+        result = false;
+        toast.error('Email Field is required !');
+        return false;
+    }
+    if (formvalue.password == "") {
+        result = false;
+        toast.error('Password Field is required !');
+        return false;
+    }
+    return result;
+}
+const submitHandel = async (e) => {
+    e.preventDefault();
+    if (validation()) {
+        const res = await axios.get(`http://localhost:3000/admin?email=${formvalue.email}`);
+        console.log(res.data);
+        if(res.data.length>0)
+        {
+            if(res.data[0].password==formvalue.password)
+            {
+                
+                    //session create
+                    localStorage.setItem('adminid',res.data[0].id)
+                    localStorage.setItem('adminname',res.data[0].name);
+                    toast.success('Login Success  !');
+                    redirect('/dashboard');
+            }
+            else
+            {
+                toast.error('Password Not match !');
+                setFormvalue({...formvalue,email:"",password:""});
+                return false;
+            }
+        }
+        else
+        {
+            toast.error('Email does not Exist !');
+            setFormvalue({...formvalue,email:"",password:""});
+            return false;
+        }
+    }
+}
+
+
   return (
     <div>
       <div>
@@ -131,20 +198,19 @@ function Admin_login() {
                   <h2>Add Login</h2>
                   <p>If you have any questions please fell free to contact with us.</p>
 
-                  <form className="form" method="post" action="mail/mail.php">
+                  <form className="form" method="post" action="" onSubmit={submitHandel}>
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="form-group">
-                          <input type="text" name="email" placeholder="Email" required />
+                          <input type="text" name="email" onChange={changeHandel} value={formvalue.email} placeholder="Email"  />
                         </div>
                       </div>
                       <div className="col-lg-12">
                         <div className="form-group">
-                          <input type="password" name="password" placeholder="Password" required />
+                          <input type="password" name="password" onChange={changeHandel} value={formvalue.password} placeholder="Password"  />
                         </div>
                       </div>
                     </div>
-
                     <div className="col-12">
                       <div className="form-group login-btn">
                         <button className="btn" type="submit">LOGIN</button>

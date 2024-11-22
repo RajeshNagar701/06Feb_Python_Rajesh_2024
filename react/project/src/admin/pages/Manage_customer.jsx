@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Admheader from '../component/Admheader'
 import Admfooter from '../component/Admfooter'
 import axios from 'axios'
+import { toast } from 'react-toastify';
 
 function Manage_customer() {
 
@@ -19,6 +20,7 @@ function Manage_customer() {
     const deleteHandel=async(id)=>{
         const res=await axios.delete(`http://localhost:3000/user/${id}`);
         console.log(res);
+        toast.success("Customer Delete Success");
         fetch();
     }
     return (

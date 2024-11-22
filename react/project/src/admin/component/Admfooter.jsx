@@ -25,13 +25,12 @@ function Admfooter() {
             </footer>
             <Helmet>
 
-                <script src="website/js/jquery-migrate-3.0.0.js"></script>
+               
 
                 <script src="website/js/jquery-ui.min.js"></script>
 
-                <script src="website/js/easing.js"></script>
+                
 
-                <script src="website/js/colors.js"></script>
 
                 <script src="website/js/popper.min.js"></script>
 
@@ -47,17 +46,10 @@ function Admfooter() {
 
                 <script src="website/js/tilt.jquery.min.js"></script>
 
-                <script src="website/js/owl-carousel.js"></script>
-
+              
                 <script src="website/js/jquery.counterup.min.js"></script>
 
-                <script src="website/js/steller.js"></script>
-
-                <script src="website/js/wow.min.js"></script>
-
-                <script src="website/js/jquery.magnific-popup.min.js"></script>
-
-                <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+              
 
 
 

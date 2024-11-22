@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Admheader from '../component/Admheader'
 import Admfooter from '../component/Admfooter'
 import axios from 'axios'
+import { toast } from 'react-toastify';
 
 function Manage_contact() {
 
@@ -20,6 +21,7 @@ function Manage_contact() {
     const deleteHandel=async(id)=>{
         const res=await axios.delete(`http://localhost:3000/contact/${id}`);
         console.log(res);
+        toast.success("Contact Delete Success");
         fetch();
     }
 
