@@ -12,6 +12,7 @@ import Module_css from "./Module_css/Module_css";
 import Mui from "./MUI/Mui";
 import Mycomp from "./Mycomp";
 import Product from "./Props/Product";
+import Main_props from "./Props_drilling/Main_props";
 import React_bootstrap from "./React_bootstrap/React_bootstrap";
 import React_bootstrap_deepak from "./React_bootstrap/React_bootstrap_deepak";
 import Simple_bootstrap from "./React_bootstrap/Simple_bootstrap";
@@ -19,6 +20,7 @@ import App_Routing from "./Routing/App_Routing";
 import Sass_css from "./Sass_css/Sass_css";
 import Class_state from "./State/Class_state/Class_state";
 import Func_state from "./State/Func_state/Func_state";
+import Main_context from "./useContext/Main_context";
 
 function App() {
   return (
@@ -71,7 +73,13 @@ function App() {
           //MUI
           //<Mui/>
 
-          <Basic_crud/>
+          //<Basic_crud/>
+
+
+          // props drilling & useContext
+          //<Main_props/>
+          <Main_context/>
+
 
         }
         

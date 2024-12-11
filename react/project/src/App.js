@@ -19,6 +19,7 @@ import Signup from "./website/pages/Signup";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import User_profile from "./website/pages/User_profile";
+import User_edit from "./website/pages/User_edit";
 
 function App() {
   return (
@@ -39,6 +40,8 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/user_profile" element={<User_profile/>}></Route>
+          <Route path="/user_edit/:id" element={<User_edit/>}></Route>
+          
 
           {
             // Admin
