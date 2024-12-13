@@ -21,6 +21,7 @@ import Sass_css from "./Sass_css/Sass_css";
 import Class_state from "./State/Class_state/Class_state";
 import Func_state from "./State/Func_state/Func_state";
 import Main_context from "./useContext/Main_context";
+import UseReducer from "./UseReducer/UseReducer";
 
 function App() {
   return (
@@ -78,9 +79,9 @@ function App() {
 
           // props drilling & useContext
           //<Main_props/>
-          <Main_context/>
+          //<Main_context/>
 
-
+          <UseReducer/>
         }
         
     </div>
